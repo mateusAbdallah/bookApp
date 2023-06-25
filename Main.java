@@ -7,22 +7,23 @@ public class Main {
         String bookTitle, bookType;
         double bookPrice;
 
-        Scanner sc = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.print("How many books do you want to enter? ");
-        enterBook = sc.nextInt();
-
+        enterBook = input.nextInt();
+        input.nextLine();
         for(int i= 0; i < enterBook; i++){
-            bookTitle = sc.nextLine();
-            System.out.println("Enter the title of the book: ");
-
-
-
-           /* System.out.println("Enter the price of the book: ");
-            bookPrice = sc.nextDouble();
-            System.out.println("Enter F for fiction and N for non-fiction: ");
-            bookType = sc.nextLine();
-            System.out.println("Enter the number of copies: ");
-            copies = sc.nextInt();*/
+        	
+            System.out.print("Enter the title of the book: ");
+            bookTitle = input.nextLine();
+            System.out.print("Enter the price of the book? ");
+            bookPrice = input.nextDouble();
+            input.nextLine();
+            System.out.print("Enter F for fiction or N for non fiction: ");
+            bookTitle = input.nextLine();
+            System.out.print("Enter the number of copies: ");
+            copies = input.nextInt();
+            input.nextLine();
+           
         }
 
 
