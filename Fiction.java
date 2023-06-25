@@ -1,20 +1,20 @@
 
-public class Fiction extends Book {
+public class Fiction extends Book implements Compute{
 
 	public Fiction(String title) {
 		super(title);
 		
 	}
 	
-	double bookPrice;
+	double price;
 	int copies;
 	
-	public double getBookPrice() {
-		return bookPrice;
+	public double getPrice() {
+		return price;
 	}
 	
-	public void setBookPrice(double bookPrice) {
-		this.bookPrice = bookPrice;
+	public void setBookPrice(double price) {
+		this.price = price;
 	}
 	
 	public int getCopies() {
@@ -23,6 +23,16 @@ public class Fiction extends Book {
 	
 	public void setCopies(int copies) {
 		this.copies = copies;
+	}
+	
+	public void displayContent() {
+		System.out.printf(title + "\t\t" + getPrice() + getCopies() + compute(price, copies));
+	}
+
+	@Override
+	public double compute(double price, int copies) {
+		
+		return price * copies;
 	}
 	
 	

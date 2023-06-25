@@ -1,5 +1,5 @@
 
-public class NonFiction extends Book {
+public class NonFiction extends Book implements Compute {
 
 	public NonFiction(String title) {
 		super(title);
@@ -25,6 +25,16 @@ public class NonFiction extends Book {
 		this.copies = copies;
 	}
 	
+	public void displayContent() {
+		System.out.printf(title + "\t\t" + getPrice() + getCopies() + compute(price, copies));
+	}
+
+	@Override
+	public double compute(double price, int copies) {
+		
+		return price * copies;
+		
+	}
 	
 
 	

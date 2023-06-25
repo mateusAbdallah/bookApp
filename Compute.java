@@ -1,5 +1,5 @@
 public interface Compute {
 
-    public void compute(double price, int copies);
+    public double compute(double price, int copies);
 
 }
