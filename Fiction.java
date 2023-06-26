@@ -1,7 +1,7 @@
 
 public class Fiction extends Book implements Compute{
 
-	public Fiction(String title) {
+	public Fiction(String title, double price, int copies) {
 		super(title);
 		
 	}

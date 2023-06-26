@@ -1,7 +1,7 @@
 
 public class NonFiction extends Book implements Compute {
 
-	public NonFiction(String title) {
+	public NonFiction(String title, double price, int copies) {
 		super(title);
 		
 	}

@@ -11,7 +11,7 @@ public class Main {
         System.out.print("How many books do you want to enter? ");
         books = input.nextInt();
         input.nextLine();
-        Book[] book = new Book[books];
+        //Book[] book = new Book[books];
         for(int i= 0; i < books; i++){
         	
             System.out.print("Enter the title of the book: ");
@@ -26,20 +26,25 @@ public class Main {
             input.nextLine();
         
             if(bookType.toUpperCase().equals("F")) {
-            	Fiction fiction = new Fiction(bookTitle);
-            	book[i] = fiction;
-            	
-            	
+            	Fiction[] fiction = new Fiction[books];
             	
             }
+            
             else if(bookType.toUpperCase().equals("N")) {
-            	NonFiction nonFiction = new NonFiction(bookTitle);
-            	book[i] = nonFiction;
+            	NonFiction[] nonFiction = new NonFiction[books];
+            	
             }
         }
-        
-        
 
 
+    }
+    
+    public static void fictionBook() {
+    	
+    	
+    }
+    
+    public static void nonFictionBook() {
+    	
     }
 }
