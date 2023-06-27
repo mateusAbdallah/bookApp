@@ -3,9 +3,12 @@ import java.util.Scanner;
 public class Main {
     public static void main (String[]args){
 
+    	Fiction[] fiction = null;
+    	NonFiction[] nonFiction = null;
         int books, copies;
         String bookTitle, bookType = "";
         double bookPrice;
+        
 
         Scanner input = new Scanner(System.in);
         System.out.print("How many books do you want to enter? ");
@@ -24,17 +27,25 @@ public class Main {
             System.out.print("Enter the number of copies: ");
             copies = input.nextInt();
             input.nextLine();
-        
+            
+            /*
             if(bookType.toUpperCase().equals("F")) {
             	Fiction[] fiction = new Fiction[books];
+            	fiction[i] = new Fiction(bookTitle, bookPrice, copies);
+            	fiction[i].displayContent();
+            	
             	
             }
             
             else if(bookType.toUpperCase().equals("N")) {
             	NonFiction[] nonFiction = new NonFiction[books];
+            	nonFiction[i] = new NonFiction(bookTitle, bookPrice, copies);
+            	nonFiction[i].displayContent();
             	
             }
+            */
         }
+        
 
 
     }
