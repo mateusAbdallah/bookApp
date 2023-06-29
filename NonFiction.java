@@ -3,6 +3,8 @@ public class NonFiction extends Book implements Compute {
 
 	public NonFiction(String title, double price, int copies) {
 		super(title);
+		this.price =price;
+		this.copies = copies;
 		
 	}
 	
@@ -25,8 +27,12 @@ public class NonFiction extends Book implements Compute {
 		this.copies = copies;
 	}
 	
-	public void displayContent() {
-		System.out.printf(title + "\t\t" + getPrice() + getCopies() + compute(price, copies));
+	public String getDescription() {
+		return title + "\t\t" + price + copies + compute(price, copies);
+	}
+	
+	public String toString() {
+		return getDescription();
 	}
 
 	@Override

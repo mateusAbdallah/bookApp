@@ -3,6 +3,9 @@ public class Fiction extends Book implements Compute{
 
 	public Fiction(String title, double price, int copies) {
 		super(title);
+		this.copies = copies;
+		this.price = price;
+		
 		
 	}
 	
@@ -13,7 +16,7 @@ public class Fiction extends Book implements Compute{
 		return price;
 	}
 	
-	public void setBookPrice(double price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
 	
@@ -25,8 +28,12 @@ public class Fiction extends Book implements Compute{
 		this.copies = copies;
 	}
 	
-	public void displayContent() {
-		System.out.printf(title + "\t\t" + getPrice() + getCopies() + compute(price, copies));
+	public String getDescription() {
+		return title + "\t\t" + price + copies + compute(price, copies);
+	}
+	
+	public String toString() {
+		return getDescription();
 	}
 
 	@Override
