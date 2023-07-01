@@ -31,9 +31,19 @@ public class Main {
 			if(bookType.toUpperCase().equals("F")) {
 				Fiction fiction = new Fiction(bookTitle, bookPrice, copies);
 				books[i] = fiction;
+				
+				//books[i] = new Fiction(bookTitle, bookPrice, copies);
+				
+				//books[i] = fiction;
+			}
+			
+			
+			if(bookType.toUpperCase().equals("N")) {
+				books[i] = new NonFiction(bookTitle, bookPrice, copies);
 			}
 
 		}
+		
 		//if(bookType.toUpperCase().equals("N")) {
 		//NonFiction nonFiction = new NonFiction(bookTitle, bookPrice, copies);
 
