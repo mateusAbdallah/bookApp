@@ -29,8 +29,12 @@ public class Main {
 			input.nextLine();
 
 			if(bookType.toUpperCase().equals("F")) {
-				Fiction[] fiction = new Fiction[booksQuantity];
-				fiction[i] = new Fiction(bookTitle, bookPrice, copies);
+				for(int x = 0; x < books.length; i++) {
+
+					Fiction[] fiction = new Fiction[x];
+					fiction[x] = new Fiction(bookTitle, bookPrice, copies);
+				}
+
 				
 				//Fiction fiction = new Fiction(bookTitle, bookPrice, copies);
 				//books[i] = fiction;
@@ -42,8 +46,12 @@ public class Main {
 			
 			
 			if(bookType.toUpperCase().equals("N")) {
-				NonFiction[] nonFiction = new NonFiction[booksQuantity];
-				nonFiction[i] = new NonFiction(bookTitle, bookPrice, copies);
+				for(int x = 0; x < books.length; i++) {
+
+					NonFiction[] nonFiction = new NonFiction[x];
+					nonFiction[x] = new NonFiction(bookTitle, bookPrice, copies);
+				}
+
 				
 				//books[i] = new NonFiction(bookTitle, bookPrice, copies);
 			}
