@@ -1,9 +1,13 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 	public static void main (String[]args){
 
-		Book books[] = null;
+		List<Book> bookFictions = new ArrayList<>(); 
+		List<Book> bookNonFictions = new ArrayList<>(); 
+		//Book books[] = null;
 		int booksQuantity, copies;
 		String bookTitle, bookType = "";
 		double bookPrice;
@@ -13,7 +17,7 @@ public class Main {
 		System.out.print("How many books do you want to enter? ");
 		booksQuantity = input.nextInt();
 		input.nextLine();
-		books = new Book[booksQuantity];
+		//books = new Book[booksQuantity];
 		//Book[] book = new Book[books];
 		for(int i= 0; i < booksQuantity; i++){
 
@@ -29,11 +33,17 @@ public class Main {
 			input.nextLine();
 
 			if(bookType.toUpperCase().equals("F")) {
-				for(int x = 0; x < books.length; i++) {
+				
+				Fiction fiction = new Fiction(bookTitle, bookPrice, copies);
+				bookFictions.add(fiction);
+				
+				
+				
+				//for(int x = 0; x < books.length; i++) {
 
-					Fiction[] fiction = new Fiction[x];
-					fiction[x] = new Fiction(bookTitle, bookPrice, copies);
-				}
+					//Fiction[] fiction = new Fiction[x];
+					//fiction[x] = new Fiction(bookTitle, bookPrice, copies);
+				//}
 
 				
 				//Fiction fiction = new Fiction(bookTitle, bookPrice, copies);
@@ -45,17 +55,35 @@ public class Main {
 			}
 			
 			
+			
 			if(bookType.toUpperCase().equals("N")) {
-				for(int x = 0; x < books.length; i++) {
+				
+				NonFiction nonFiction = new NonFiction(bookTitle, bookPrice, copies);
+				bookNonFictions.add(nonFiction);
+				
+				
+				//for(int x = 0; x < books.length; i++) {
 
-					NonFiction[] nonFiction = new NonFiction[x];
-					nonFiction[x] = new NonFiction(bookTitle, bookPrice, copies);
-				}
+					//NonFiction[] nonFiction = new NonFiction[x];
+					//nonFiction[x] = new NonFiction(bookTitle, bookPrice, copies);
+				//}
 
 				
 				//books[i] = new NonFiction(bookTitle, bookPrice, copies);
 			}
+			
+			
+			//bookFictions.stream().filter(f -> f.getTitle() );
+			//bookFictions.forEach(f -> System.out.printf("%"));
 
+		}
+		displayFiction();
+		for(Object item : bookFictions) {
+			System.out.println(item);
+		}
+		displayNonFiction();
+		for(Object item : bookNonFictions) {
+			System.out.println(item);
 		}
 		
 		//if(bookType.toUpperCase().equals("N")) {
@@ -65,16 +93,16 @@ public class Main {
 	}
 	
 	public static void displayFiction() {
-		System.out.println("-------------------------------");
-		System.out.println("FICTION BOOK TITLE" + "\t\t" + "PRICE" + " " + "COPIES" + " " + "TOTAL");
-		System.out.println("-------------------------------");
+		System.out.println("--------------------------------------------------------------------");
+		System.out.println("FICTION BOOK TITLE" + "\t" + "PRICE" + " " + "COPIES" + " " + "TOTAL");
+		System.out.println("--------------------------------------------------------------------");
 	}
 	
 
 	public static void displayNonFiction() {
-		System.out.println("-------------------------------");
-		System.out.println("NON-FICTION BOOK TITLE" + "\t\t" + "PRICE" + " " + "COPIES" + " " + "TOTAL");
-		System.out.println("-------------------------------");
+		System.out.println("------------------------------------------------------------------------");
+		System.out.println("NON-FICTION BOOK TITLE" + "\t" + "PRICE" + " " + "COPIES" + " " + "TOTAL");
+		System.out.println("------------------------------------------------------------------------");
 	}
 	
 	/*
