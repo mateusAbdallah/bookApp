@@ -29,7 +29,7 @@ public class Fiction extends Book implements Compute{
 	}
 	
 	public String getDescription() {
-		return title + "\t\t" + price + "   " +copies + "     " + compute(price, copies);
+		return title + "\t\t\t" + price + "   " +copies + "     " + compute(price, copies);
 	}
 	
 	public String toString() {
