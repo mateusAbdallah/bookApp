@@ -28,7 +28,8 @@ public class NonFiction extends Book implements Compute {
 	}
 	
 	public String getDescription() {
-		return title + "\t\t" + price + "   " +copies + "     " + compute(price, copies);
+		return title + "\t\t\t" + price + "\s\s\s" + copies + "\s\s\s\s\s" + compute(price, copies);
+		
 	}
 	
 	public String toString() {
